@@ -1,0 +1,516 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* DEMO styles. Not needed. */
+
+  
+
+
+
+.bgimg-1 .search {
+    padding: 5px 0;
+    width: full;
+    height: full;
+    position: relative;
+    left: 10px;
+    float: center;
+    line-height: 22px;
+}
+@media (max-width: 684px) {
+  body {
+    font-size: 1.53rem;
+  }
+}
+@media (max-width: 382px) {
+  body {
+    font-size: 1.35rem;
+  }
+}
+
+
+.bgimg-1 .wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.bgimg-1 .cta {
+    display: flex;
+    padding: 10px 45px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
+    background: #6225E6;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+}
+
+.bgimg-1 .cta:focus {
+   outline: none; 
+}
+
+.bgimg-1 .cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.bgimg-1 .cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.bgimg-1 .cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+  .bgimg-1 span {
+    transform: skewX(15deg) 
+  }
+
+ .bgimg-1 span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+  }
+  
+
+
+.bgimg-1 path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+
+.bgimg-1 path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+
+.bgimg-1 .cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+
+.bgimg-1 .cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+
+.bgimg-1 .cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Arial Black", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+label{
+    color:black;
+    font-weight: bold;
+}
+.bgimg-1 {
+  
+  height: 100%;
+}
+.bgimg-1 input {
+    width:70%;
+    height:100%;
+    position:relative;
+	
+	font-size: 1.5em;
+	
+	
+	background: linear-gradient(21deg, #10abff, #1beabd);
+	
+	
+	padding: 3px;
+	
+	display: inline-block;
+	
+	border-radius: 9999em;}
+	
+	input{
+    text-align: center;
+    width:auto;
+    font-weight: bold;
+    font-size:8px;
+  }
+.bgimg-1 input	span {
+		
+		transform: scale(.993, .94); 
+		transition: transform .5s, opacity .25s;
+		opacity: 0; 
+		
+		position:absolute;
+		z-index: 0; 
+		margin:4px; 
+		left:0;
+		top:0;
+		right:0;
+		bottom:0;
+		border-radius: inherit;
+		pointer-events: none; 
+		box-shadow: inset 0 0 0 3px #fff,
+			0 0 0 4px #fff,
+			3px -3px 30px #1beabd, 
+			-3px 3px 30px #10abff;
+	}
+    
+
+
+.bgimg-1 .caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.bgimg-1 .caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+
+</style>
+</head>
+<body>
+
+  <div class="bgimg-1" style="background-image: url('https://i0.wp.com/deltanews.eu/wp-content/uploads/2017/10/4_81.jpg?fit=1920%2C1080&ssl=1'); ">
+
+    <div class="col-md-12 text-center section">
+        <div class="caption">
+            <div class="container-fluid" style="margin-top:20%">
+                <form id="search">
+                    <div class="search">
+
+                        <input type="text" id="fromAddress" class="form-control input-sm" placeholder="Give Me Student's Address!" />
+
+                    </div>
+                    <div class="wrapper">
+                        <button class="cta" type="submit">
+<span>SEARCH</span>
+<span>
+  <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+      <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+      <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+    </g>
+  </svg>
+</span> 
+</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+ 
+
+</div>
+</div>
+
+<div clas="bgimg-1" id="toggleq"style="background-image: url('https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg'); display:none; "  >
+  <div class="col-md-12 text-center section">
+  <div class="caption">
+    
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+<div class="container-fluid">
+
+        <form class="form-inline" id="myform">
+            <table class="table table-condensed ">
+
+                <tbody>
+                    <tr>
+                        <td><label for="lastname">Name:</label> </td>
+                        <td><input type="name" class="form-control" id="lastname" placeholder="last name" readonly></td>
+                        <td><label for="firstname">LastName:</label> </td>
+                        <td><input type="name" class="form-control" id="name" placeholder="first name" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="mothername">Mother's Name:</label> </td>
+                        <td><input type="name" class="form-control" id="mothername" placeholder="mother's name" readonly></td>
+                        <td><label for="fname">Father's Name:</label> </td>
+                        <td><input type="name" class="form-control" id="fathername" placeholder="father's name" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="birthplace">Birth Year:</label> </td>
+                        <td><input type="text" class="form-control" id="birthyear" placeholder="birth year" readonly></td>
+                        <td><label for="uyear">Register year:</label> </td>
+                         <td><input type="text" class="form-control" id="uyear" placeholder="Uni. year" readonly></td>
+                    
+                      </tr>
+                    <tr>
+                    <td><label for="Specialization">Specialization:</label> </td>
+                    <td><input type="text" class="form-control" id="specialization" placeholder="specialization" readonly></td>
+                </tr>
+                </tbody>
+                </table>
+                </form>
+                   </div>
+                 </div>
+                  </div>
+        
+ <div class="col-md-12 text-center section">
+  <div class="caption">
+    
+         
+<div class="container-fluid">
+                <form>
+            <table class="table table-condensed ">
+                <thead class="table-dark" style="text-align:center">
+                    <tr>
+                        <td><p>Class</p> </td>
+                        <td><p>Grade</p></td>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td><label  >Semester A</label> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima0" placeholder="class name" readonly></td>
+                        
+                        <td><input type="text" class="form-control" id="grade0" placeholder="grade" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima1" placeholder="class name" readonly></td>
+                        
+                        <td><input type="text" class="form-control" id="grade1" placeholder="grade" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima2" placeholder="class name" readonly> </td>
+                        
+                        <td><input type="text" class="form-control" id="grade2" placeholder="grade" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="B">Semester B</label> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima3" placeholder="class name" readonly> </td>
+                       
+                        <td><input type="text" class="form-control" id="grade3" placeholder="grade" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima4" placeholder="class name" readonly> </td>
+                        
+                        
+                        <td><input type="text" class="form-control" id="grade4" placeholder="grade" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="C">Semester C</label> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima5" placeholder="class name" readonly> </td>
+                        
+                       
+                        <td><input type="text" class="form-control" id="grade5" placeholder="grade" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" id="mathima6" placeholder="class name" readonly > </td>
+                       
+    
+                        <td><input type="text" class="form-control" id="grade6"  placeholder="grade" readonly></td>
+                    </tr>
+
+
+
+                </tbody>
+
+            </table>
+            <table class="table table-condensed ">
+                <thead class="table-dark" style="text-align:center">
+                    <tr>
+                        <td>
+                            <p>Average</p>
+                        </td>
+                        <td>
+                            <p>ECTS</p>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td><input type="text" class="form-control" id="avg" placeholder="avg" readonly> </td>
+                       
+    
+                      <td><input type="text" class="form-control" id="ects" placeholder="ects" readonly></td>
+                    </tr>
+
+                  </tbody>
+                
+
+              </table>
+            </form>
+            </div>
+            </div>
+            </div>
+            <div class="row row-centered" style="background-color:black; text-align:center; width:102%;">
+                <div  class ="col-md-12 col-centered" style="background-color:black; text-align:center;">
+        
+                    <p style="color:white; text-align:center"> CreatedBy@GeorgeMichoulis </p>
+        
+                </div>
+            </div>
+              
+    
+          </div>
+          
+         
+<script src="web3.min.js"></script>
+<script src="Abi.js"></script>
+
+  
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
+<script>
+    
+    window.addEventListener('load', async () => {
+    // Modern dapp browsers...
+    if (window.ethereum) {
+        window.web3 = new Web3(ethereum);
+        try {
+            // Request account access if needed
+            await ethereum.enable();
+            // Acccounts now exposed
+            web3.eth.sendTransaction({/* ... */});
+        } catch (error) {
+            // User denied account access...
+        }
+    }
+    // Legacy dapp browsers...
+    else if (window.web3) {
+        window.web3 = new Web3(web3.currentProvider);
+        // Acccounts always exposed
+        web3.eth.sendTransaction({/* ... */});
+    }
+    // Non-dapp browsers...
+    else {
+        console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+    }
+});
+        if ( typeof web3 != 'undefined' ) {
+        web3 = new Web3(web3.currentProvider);
+        } else {
+        web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+        web3.eth.defaultAccount = web3.eth.accounts[0];
+</script>
+
+<script>
+  var contractAddress = "0x07dc4077f33c7bc71643df7029c59339540a0d1a";
+  var Contract = new web3.eth.Contract(abi, contractAddress);
+
+  $("#search").submit(function() {
+            event.preventDefault();
+            $("#toggleq").slideToggle();
+            var student = new Array(7);
+            var grades;
+           
+            var student=[];
+            var fromAddress = $('#fromAddress').val();
+            if (web3.utils.isAddress(fromAddress) != true) {
+                alert('Not correct address');
+                return;
+            }
+           
+           Contract.methods.getStudent(fromAddress).call(
+                function(error, result) {
+                if (error) {
+                console.log('error: ' + error);
+                }
+                else {
+                    console.log(result);
+                       for(var i=0;i<7;i++)
+                       {
+                         student[i]=result[i];
+                         
+                       }
+                       $('#name').val(student[0]).trigger('change');
+                       $('#lastname').val(student[1]).trigger('change');
+                       $('#fathername').val(student[2]).trigger('change');
+                       $('#mothername').val(student[3]).trigger('change');
+                       $('#birthyear').val(student[4]).trigger('change');
+                       $('#specialization').val(student[5]).trigger('change');
+                       $('#uyear').val(student[6]).trigger('change');
+                       
+                    }
+
+ });
+            var classes=[];
+            var grades=[];
+            
+            Contract.methods.getGradesOfStudent(fromAddress).call(
+                function(error, result) {
+                    if (error) {
+                        console.log('error: ' + error);
+                    } else {
+                      $('#ects').val(web3.utils.toDecimal(result[2])).trigger('change');
+                      $('#avg').val(web3.utils.toDecimal(result[3])).trigger('change');
+                      
+                      
+                        classes=result[0];
+                        grades=result[1];
+                        for(i=0;i<classes.length;i++){
+                          $('#mathima'+i).val(web3.utils.toUtf8(classes[i])).trigger('change');
+                          $('#grade'+i).val(web3.utils.toDecimal(grades[i])).trigger('change');
+                          }
+                    }
+                });
+
+        });
+  
+  
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
